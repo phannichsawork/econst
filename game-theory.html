@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Theory: Foundations, Strategic Equilibria & Economic Applications | Siwat Teimtad</title>
+  <meta name="description" content="A comprehensive treatise on mathematical game theory, strategic equilibria, mechanism design, and economic applications by economist Siwat Teimtad.">
+  <link rel="icon" type="image/png" href="black.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Reading Progress Indicator -->
+  <div id="reading-progress"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="black.png" alt="Logo" class="brand-logo">
+        <div class="brand-meta">
+          <span class="brand-name">Siwat Teimtad</span>
+          <span class="brand-role">Economist & Researcher</span>
+        </div>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article-container">
+    <a href="index.html#projects" class="article-back">
+      &larr; Back to Portfolio
+    </a>
+
+    <header class="article-header">
+      <h1 class="article-title">Game Theory: Foundations, Strategic Equilibria & Economic Applications</h1>
+      <p class="article-subtitle">
+        A mathematical and analytical exploration of interdependent strategic choice, equilibrium concepts, dynamic bargaining, and mechanism design in modern economics.
+      </p>
+
+      <div class="article-meta-bar">
+        <span><strong>Author:</strong> Siwat Teimtad</span>
+        <span><strong>Field:</strong> Microeconomic Theory & Applied Strategy</span>
+        <span><strong>Length:</strong> 1,500+ Words</span>
+        <span><strong>Reading Time:</strong> ~8 minutes</span>
+      </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <nav class="toc-box">
+      <div class="toc-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="8" y1="6" x2="21" y2="6"></line>
+          <line x1="8" y1="12" x2="21" y2="12"></line>
+          <line x1="8" y1="18" x2="21" y2="18"></line>
+          <line x1="3" y1="6" x2="3.01" y2="6"></line>
+          <line x1="3" y1="12" x2="3.01" y2="12"></line>
+          <line x1="3" y1="18" x2="3.01" y2="18"></line>
+        </svg>
+        Contents & Structural Outline
+      </div>
+      <ul class="toc-list">
+        <li><a href="#gt-section-1">1. Foundations and Historical Genesis</a></li>
+        <li><a href="#gt-section-2">2. The Formal Anatomy of a Strategic Game</a></li>
+        <li><a href="#gt-section-3">3. Normal vs. Extensive Form & Dynamic Games</a></li>
+        <li><a href="#gt-section-4">4. Dominance and the Prisoner’s Dilemma</a></li>
+        <li><a href="#gt-section-5">5. The Nash Equilibrium: Pure vs. Mixed Strategies</a></li>
+        <li><a href="#gt-section-6">6. Repeated Games & The Folk Theorem</a></li>
+        <li><a href="#gt-section-7">7. Asymmetric Information: Adverse Selection and Signaling</a></li>
+        <li><a href="#gt-section-8">8. Mechanism Design & Auction Theory</a></li>
+        <li><a href="#gt-section-9">9. Strategic Modeling in Macro and Industrial Economics</a></li>
+        <li><a href="#gt-section-10">10. Concluding Synthesis</a></li>
+      </ul>
+    </nav>
+
+    <article class="article-content">
+      <section id="gt-section-1">
+        <h2>1. Foundations and Historical Genesis</h2>
+        <p>
+          Traditional neoclassical microeconomics historically operated under the simplifying assumption of perfect competition or pure monopoly. In perfect competition, individual consumers and producers are infinitesimal price-takers whose actions exert negligible influence on market clearing prices. In pure monopoly, a single price-maker confronts a passive, aggregated consumer demand curve. While mathematically tractable, neither model adequately captures the reality of modern markets: oligopolistic industries, international trade agreements, corporate wage bargaining, and geopolitical confrontations.
+        </p>
+        <p>
+          Game theory emerged to resolve this fundamental lacuna. It is the formal mathematical study of <strong>strategic interdependence</strong>—scenarios in which an agent’s payoff depends not merely on their own decisions, but crucially on the anticipation of choices made by other rational actors.
+        </p>
+        <p>
+          The field’s modern foundation was crystallized in 1944 with the seminal publication of <em>Theory of Games and Economic Behavior</em> by mathematician John von Neumann and economist Oskar Morgenstern. Their work introduced expected utility theory and analyzed zero-sum interactions. However, the revolutionary paradigm shift arrived in 1950 when John Forbes Nash Jr. expanded game theory into non-cooperative, non-zero-sum environments, introducing the universal equilibrium concept that now bears his name.
+        </p>
+      </section>
+
+      <section id="gt-section-2">
+        <h2>2. The Formal Anatomy of a Strategic Game</h2>
+        <p>
+          In economic modeling, any non-cooperative game in normal (or strategic) form is formally defined as a triplet:
+        </p>
+        <blockquote>
+          <strong>G = (N, {S<sub>i</sub>}<sub>i ∈ N</sub>, {u<sub>i</sub>}<sub>i ∈ N</sub>)</strong>
+        </blockquote>
+        <p>
+          Where the constituent components are defined as:
+        </p>
+        <ul>
+          <li><strong>Players (N):</strong> A finite set of decision-makers, indexed <code>i = {1, 2, ..., n}</code>. Each player is presumed to possess rational, transitive preferences over outcomes.</li>
+          <li><strong>Strategy Space (S<sub>i</sub>):</strong> The set of all feasible complete action plans available to player <code>i</code>. A strategy profile <code>s = (s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>n</sub>) ∈ S</code> represents a specific combination of strategies executed by every player in the game.</li>
+          <li><strong>Payoff Function (u<sub>i</sub>):</strong> A von Neumann-Morgenstern utility mapping <code>u<sub>i</sub>: S &rarr; &real;</code> that assigns a real numerical payoff to player <code>i</code> for every feasible profile of actions across all agents.</li>
+        </ul>
+        <p>
+          In games featuring uncertainty, the specification is augmented to incorporate nature’s probability distributions, information sets, and beliefs regarding the types of rival participants.
+        </p>
+      </section>
+
+      <section id="gt-section-3">
+        <h2>3. Normal vs. Extensive Form & Dynamic Games</h2>
+        <p>
+          Depending on the temporal sequence and information structure of decision-making, games are represented through two primary formalisms:
+        </p>
+        <h3>The Normal (Strategic) Form</h3>
+        <p>
+          Typically represented via an <code>m &times; k</code> payoff matrix, the normal form is ideal for simultaneous-move interactions where players choose strategies concurrently without observing the contemporary actions of rivals.
+        </p>
+        <h3>The Extensive (Tree) Form</h3>
+        <p>
+          Sequential games require representation as game trees. Nodes represent decision junctures assigned to specific players, branches denote available actions, and terminal leaves represent final payoffs. When players possess imperfect information (inability to distinguish which specific node they occupy within an information set), dotted lines enclose the information set.
+        </p>
+        <div class="callout callout-info">
+          <div class="callout-icon">⚡</div>
+          <div class="callout-body">
+            <div class="callout-title">Backward Induction & Subgame Perfection</div>
+            In finite extensive-form games with perfect information, the dominant solution concept is <em>Subgame Perfect Nash Equilibrium (SPNE)</em>, solved via <strong>backward induction</strong>. One begins at the terminal nodes, solves for the rational best response of the final mover, and rolls backward to eliminate non-credible threats.
+          </div>
+        </div>
+      </section>
+
+      <section id="gt-section-4">
+        <h2>4. Dominance and the Prisoner’s Dilemma</h2>
+        <p>
+          The most celebrated archetype in game theory is the <strong>Prisoner’s Dilemma</strong>, originally formalized by Merrill Flood and Melvin Dresher in 1950 and popularized by Albert Tucker. It demonstrates the profound tension between individual rationality and collective welfare.
+        </p>
+        <p>
+          Consider two suspects arrested for a joint crime, interrogated in separate rooms without communication:
+        </p>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Player 1 \ Player 2</th>
+                <th>Cooperate (Remain Silent)</th>
+                <th>Defect (Confess)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cooperate (Silent)</strong></td>
+                <td>(-1, -1) &nbsp; <em>[Social Optimum]</em></td>
+                <td>(-10, 0)</td>
+              </tr>
+              <tr>
+                <td><strong>Defect (Confess)</strong></td>
+                <td>(0, -10)</td>
+                <td><strong>(-5, -5) &nbsp; [Nash Equilibrium]</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Let us analyze Player 1’s incentives. If Player 2 remains silent, Player 1 achieves 0 years by defecting versus -1 year by cooperating. If Player 2 defects, Player 1 receives -5 years by defecting versus -10 years by cooperating. Regardless of Player 2’s choice, defecting yields a strictly superior payoff.
+        </p>
+        <p>
+          Thus, <strong>Defect</strong> is a <em>strictly dominant strategy</em> for both agents. The resulting equilibrium is <code>(Defect, Defect)</code> yielding <code>(-5, -5)</code>, which is strictly <strong>Pareto-inefficient</strong>: both players would be strictly better off at <code>(-1, -1)</code>. This structural paradox directly models real-world economic failures:
+        </p>
+        <ul>
+          <li><strong>Cartel Instability:</strong> Firms in an oligopoly (e.g., OPEC members) agree to restrict production to keep prices high, yet each firm faces an irresistible incentive to cheat and overproduce.</li>
+          <li><strong>Public Goods & Free-Riding:</strong> Individuals withhold tax payments or environmental preservation, hoping others will bear the cost.</li>
+          <li><strong>Tragedy of the Commons:</strong> Overfishing and aquifer depletion stemming from uncoordinated rational exploitation.</li>
+        </ul>
+      </section>
+
+      <section id="gt-section-5">
+        <h2>5. The Nash Equilibrium: Pure vs. Mixed Strategies</h2>
+        <p>
+          A strategy profile <code>s* = (s<sub>1</sub>*, s<sub>2</sub>*, ..., s<sub>n</sub>*)</code> is a <strong>Nash Equilibrium</strong> if no player possesses an incentive to unilaterally deviate to an alternative strategy, holding all other players’ strategies fixed:
+        </p>
+        <blockquote>
+          u<sub>i</sub>(s<sub>i</sub>*, s<sub>-i</sub>*) &ge; u<sub>i</sub>(s<sub>i</sub>, s<sub>-i</sub>*) &nbsp;&nbsp;&forall; s<sub>i</sub> &in; S<sub>i</sub>, &forall; i &in; N
+        </blockquote>
+        <p>
+          In economic terms, every player is executing a mutual best response.
+        </p>
+        <h3>Mixed Strategy Equilibria</h3>
+        <p>
+          Not every game possesses a pure strategy Nash equilibrium. In games of pure conflict, such as <em>Matching Pennies</em> or an audit game between tax inspectors and corporations, any predictable pure action is immediately exploited.
+        </p>
+        <p>
+          John Nash proved via Kakutani’s Fixed Point Theorem that every finite game possesses <strong>at least one Nash Equilibrium</strong> in either pure or mixed strategies. A mixed strategy <code>&sigma;<sub>i</sub></code> assigns a probability distribution over the pure strategy set <code>S<sub>i</sub></code>. In equilibrium, a player randomizes such that their opponent is rendered indifferent among their own pure strategies, creating strategic unpredictability.
+        </p>
+      </section>
+
+      <section id="gt-section-6">
+        <h2>6. Repeated Games & The Folk Theorem</h2>
+        <p>
+          While single-shot Prisoner’s Dilemmas dictate inevitable defection, real-world economic interactions are rarely isolated events; they are sustained relationships. In repeated games (supergames), the shadow of the future alters current incentives.
+        </p>
+        <p>
+          If players discount future utility at rate <code>&delta; &in; (0, 1)</code> and the game is repeated indefinitely, cooperation can be sustained as an equilibrium through trigger strategies.
+        </p>
+        <ul>
+          <li><strong>Grim Trigger:</strong> A player cooperates until the rival defects once; thereafter, they defect unconditionally forever. If the discount factor <code>&delta;</code> is sufficiently close to 1 (players care sufficiently about future profits), the immediate gain from cheating is overwhelmed by the perpetual loss of future cartel profits.</li>
+          <li><strong>Tit-for-Tat:</strong> Start by cooperating, then mirror the opponent’s previous move in every subsequent round. Demonstrated by Robert Axelrod’s computational tournaments to be exceptionally resilient, forgiving, and retaliatory.</li>
+        </ul>
+        <p>
+          The celebrated <strong>Folk Theorem</strong> formalizes this principle: in an infinitely repeated game with sufficiently patient players, virtually any feasible, individually rational payoff profile can be sustained as a subgame perfect equilibrium.
+        </p>
+      </section>
+
+      <section id="gt-section-7">
+        <h2>7. Asymmetric Information: Adverse Selection and Signaling</h2>
+        <p>
+          Standard game theory assumes symmetric information. In the late 20th century, George Akerlof, Michael Spence, and Joseph Stiglitz integrated asymmetric information into game theoretic models, revolutionizing economics.
+        </p>
+        <h3>Adverse Selection (Akerlof’s Lemons)</h3>
+        <p>
+          In <em>The Market for Lemons</em> (1970), Akerlof showed that when sellers of used cars possess private information regarding vehicle quality, buyers discount offers to reflect average quality. This discount drives high-quality vehicle owners out of the market, spiraling into adverse selection and total market collapse.
+        </p>
+        <h3>Spence’s Job Market Signaling</h3>
+        <p>
+          Michael Spence (1973) formalized how agents can overcome information asymmetry via strategic signaling. High-productivity workers signal their innate capability by acquiring higher education degrees. For a signal to be credible in a <strong>Separating Equilibrium</strong>, it must satisfy the <em>Single-Crossing Condition</em>: the marginal cost of acquiring the credential must be strictly higher for low-productivity types than for high-productivity types. If the cost differential holds, low-ability workers choose not to mimic high-ability workers, enabling the market to achieve sorting equilibrium.
+        </p>
+      </section>
+
+      <section id="gt-section-8">
+        <h2>8. Mechanism Design & Auction Theory</h2>
+        <p>
+          Described as "reverse game theory," <strong>mechanism design</strong> (pioneered by Leonid Hurwicz, Eric Maskin, and Roger Myerson) asks: given that agents are self-interested and possess private information, how can an institution or market designer engineer the rules of a game such that equilibrium play yields a desired social objective?
+        </p>
+        <p>
+          Its most celebrated application is <strong>Auction Theory</strong> (William Vickrey, Paul Milgrom, Robert Wilson):
+        </p>
+        <ol>
+          <li><strong>First-Price Sealed-Bid:</strong> Bidders shade bids below their true valuation to capture surplus.</li>
+          <li><strong>Second-Price Sealed-Bid (Vickrey Auction):</strong> Bidders submit hidden bids, and the highest bidder wins but pays the second-highest bid. In a Vickrey auction, bidding one’s exact true valuation is a <em>weakly dominant strategy</em>, eliminating bidding distortion.</li>
+          <li><strong>Revenue Equivalence Theorem:</strong> Under standard risk-neutral independent private values assumptions, English, Dutch, First-Price, and Second-Price auctions yield identical expected revenue to the seller.</li>
+        </ol>
+        <p>
+          Modern mechanism design orchestrates multi-billion-dollar telecom spectrum auctions, electricity clearing markets, kidney exchange matching algorithms, and search engine ad auctions.
+        </p>
+      </section>
+
+      <section id="gt-section-9">
+        <h2>9. Strategic Modeling in Macro and Industrial Economics</h2>
+        <p>
+          Game theory serves as the computational engine across core economic sub-disciplines:
+        </p>
+        <h3>Industrial Organization: Cournot vs. Bertrand Competition</h3>
+        <p>
+          In a Cournot oligopoly, firms choose quantities simultaneously, yielding market prices between monopoly and competitive levels. In a Bertrand oligopoly, firms compete on price under homogeneous goods, driving price immediately down to marginal cost with only two competitors—an extreme paradox resolved by product differentiation, capacity constraints, and repeated play.
+        </p>
+        <h3>Macroeconomics & Monetary Policy Credibility</h3>
+        <p>
+          Finn Kydland and Edward Prescott (1977) applied dynamic game theory to monetary policy, demonstrating the <em>time inconsistency of optimal plans</em>. A central bank that promises zero inflation faces an ex-post incentive to generate surprise inflation to lower unemployment. Rational workers anticipate this and demand higher wages, leading to an equilibrium with high inflation and no employment gain. The game-theoretic solution is institutional delegation: creating independent central banks with conservative leadership and rule-bound commitments.
+        </p>
+      </section>
+
+      <section id="gt-section-10">
+        <h2>10. Concluding Synthesis</h2>
+        <p>
+          Game theory has fundamentally transformed economics from a passive science of mechanical equilibrium into an active study of strategic architecture. By modeling how incentives, informational disparities, credible threats, and institutional constraints govern human decision-making, game theory provides economists with an indispensable framework to analyze markets, design policy, and navigate complex human interactions.
+        </p>
+        <p>
+          Whether analyzing corporate mergers, designing carbon credit trading systems, or evaluating central bank forward guidance, the principles of strategic equilibrium remain central to mastering economics in the modern era.
+        </p>
+      </section>
+    </article>
+
+    <!-- Footer within article -->
+    <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: gap;">
+      <a href="hazlitt-economics.html" class="btn btn-secondary">
+        &larr; Hazlitt (1946) Review
+      </a>
+      <a href="index.html#projects" class="btn btn-primary">
+        Back to Portfolio Home &rarr;
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="black.png" alt="Logo" class="footer-logo">
+        <span>Siwat Teimtad</span>
+      </div>
+      <div>
+        <p>"Master Economics, the Simple Way."</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hazlitt-economics.html">Hazlitt (1946)</a></li>
+        <li><a href="mailto:dx@outlook.com">dx@outlook.com</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
